@@ -1,0 +1,26 @@
+<table class="table table row">
+    <table BORDER ='0' CELLPADDING="10" CELLSPACING="500"WIDTH="1275" class="css-serial">  
+        <thead>
+          <th width ='50'>Sno</th>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Type</th>
+        </thead>
+  <tbody *ngFor="let Comp of CompEvents" >
+     
+      <tr *ngIf="Comp.type=='Exhibition'">  
+          <td width='50'></td>
+          <td ><a [routerLink] ="['/eventDetails',Comp.name]">{{Comp.name}}</a></td>
+          <td><div [ngClass]="{rPass:Comp.status=='ended'}">{{Comp.status}}</div></td>
+      <td>{{Comp.type}}</td>
+      <hr/>    
+    </tr>
+ 
+  </tbody>
+  </table>
+</table>
+ <br/>
+<router-outlet></router-outlet>
+
+ 
+  

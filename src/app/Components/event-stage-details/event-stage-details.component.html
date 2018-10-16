@@ -1,0 +1,53 @@
+<br/>
+<br/>
+
+    <table BORDER ='0' CELLPADDING="5" CELLSPACING="200"WIDTH="400" class="cs-serial">  
+        
+        
+        <tr>   <td>Name:</td>
+        <td>{{eventObjects.name}}</td>
+        </tr>
+        <tr> <td>Start Date:</td>
+          <td>{{eventObjects.startDate}}</td></tr>
+
+          <tr><td>End Date: </td> 
+            <td>{{eventObjects.endDate}}</td></tr>
+            <tr><td>Bookings:</td>  
+              <td>  {{eventObjects.bookings}}</td></tr>
+              <tr><td>Status:</td>     
+                <td><h3 [ngClass]="{rPass:eventObjects.status=='ended'}">{{eventObjects.status}}</h3></td></tr>
+
+                <tr>
+                  <td>Event Type:</td>
+                  <td>  {{eventObjects.type}}</td></tr>
+      
+       
+        </table>
+      
+       <br/>
+
+<div>
+       <table class="table table row"> 
+        <table BORDER ='0' CELLPADDING="10" CELLSPACING="500"WIDTH="1275" class="css-serial">   
+  <thead>
+    <th width ='50'>Sno</th>
+    <th>Name</th>
+    <th>Status</th>
+    <th>Type</th>
+  </thead>
+<tbody *ngFor="let Comp of CompEvents" >
+
+<tr *ngIf="Comp.type=='Stage Event'">  
+    <td width='50'></td>
+    <td ><a [routerLink] ="['/seventDetails',Comp.name]">{{Comp.name}}</a></td>
+    <td><h3 [ngClass]="{rPass:Comp.status=='ended'}">{{Comp.status}}</h3></td>
+<td>{{Comp.type}}</td>
+<hr/>    
+</tr>
+
+</tbody>
+</table>
+</table>
+</div>
+<br/>
+<router-outlet></router-outlet>

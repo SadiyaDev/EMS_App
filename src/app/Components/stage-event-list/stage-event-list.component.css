@@ -1,0 +1,50 @@
+td {
+    display: table-cell;
+    vertical-align: inherit;
+   color: #0377E4
+   
+}
+
+.css-serial {
+    counter-reset: serial-number; /* Set the serial number counter to 0 */
+   }
+   .css-serial td:first-child:before {
+    counter-increment: serial-number; /* Increment the serial number counter */
+    content: counter(serial-number); /* Display the counter */
+   }
+table{
+    margin: 20px;
+    padding:10px;
+    background-color: white;
+}
+div{
+    -moz-border-radius: 1px;
+
+    border-radius: 20px;
+       border:solid 1px white;
+       width:75px;
+       padding-left: 6px;
+       background-color: #E28C46;
+       padding:1px;
+       color:white;
+       text-align: center;
+       font-size:11px;
+       font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
+       font-weight:10px;
+   }
+   .rPass{
+    -moz-border-radius: 1px;
+    
+        border-radius: 20px;
+           border:solid 1px white;
+           width:75px;
+           padding-left: 6px;
+           background-color: #6B6D6E;
+           padding:1px;
+           color:white;
+           text-align: center;
+           font-size:11px;
+           font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
+           font-weight:10px;
+
+   }
